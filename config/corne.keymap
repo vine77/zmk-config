@@ -33,6 +33,15 @@
     };
   };
 
+  combos {
+    compatible = "zmk,combos";
+
+    jk_esc {
+      bindings = <&kp ESC>;
+      key-positions = <19 20>;
+    };
+  };
+
   keymap {
     compatible = "zmk,keymap";
 
