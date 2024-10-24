@@ -74,10 +74,10 @@
 
     adjust_layer {
       bindings = <
-        &trans  &kp ESC         &trans        &trans  &trans  &trans    &trans    &trans     &trans     &trans     &trans  &trans
-        &trans  &kp TAB         &trans        &trans  &trans  &trans    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans  &trans
-        &trans  &bt BT_CLR_ALL  &bt BT_SEL 0  &trans  &trans  &trans    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans  &trans
-                                              &trans  &trans  &trans    &trans    &trans     &trans
+        &trans  &trans       &trans  &trans  &trans        &trans            &trans    &trans     &trans     &trans     &trans  &trans
+        &trans  &kp TAB      &trans  &trans  &trans        &trans            &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans  &trans
+        &trans  &kp LS(TAB)  &trans  &trans  &bt BT_SEL 0  &bt BT_CLR_ALL    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans  &trans
+                                     &trans  &trans        &trans            &trans    &trans     &trans
       >;
     };
   };
