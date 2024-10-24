@@ -40,6 +40,11 @@
       bindings = <&kp ESC>;
       key-positions = <19 20>;
     };
+
+    df_tab {
+      bindings = <&kp TAB>;
+      key-positions = <15 16>;
+    };
   };
 
   macros {
