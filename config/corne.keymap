@@ -42,6 +42,14 @@
     };
   };
 
+  macros {
+    ctrl_globe: ctrl_globe {
+      compatible = "zmk,behavior-macro-one-param";
+      #binding-cells = <1>;
+      bindings = <&macro_press &kp LCTL>, <&macro_press &kp GLOBE>, <&macro_param_1to1>, <&macro_release &kp GLOBE>, <&macro_release &kp LCTL>;
+    };
+  };
+
   keymap {
     compatible = "zmk,keymap";
 
