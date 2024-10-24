@@ -46,7 +46,15 @@
     ctrl_globe: ctrl_globe {
       compatible = "zmk,behavior-macro-one-param";
       #binding-cells = <1>;
-      bindings = <&macro_press &kp LCTL>, <&macro_press &kp GLOBE>, <&macro_param_1to1>, <&macro_release &kp GLOBE>, <&macro_release &kp LCTL>;
+      bindings =
+        <&macro_press>,
+        <&kp LCTL>,
+        <&macro_press>,
+        <&kp GLOBE &macro_param_1to1>,
+        <&macro_release>,
+        <&kp MACRO_PLACEHOLDER>,
+        <&macro_release>,
+        <&kp LCTL>;
     };
   };
 
@@ -82,10 +90,10 @@
 
     adjust_layer {
       bindings = <
-        &trans  &trans       &trans  &trans  &trans        &trans            &trans    &trans     &trans     &trans     &trans  &trans
-        &trans  &kp TAB      &trans  &trans  &trans        &trans            &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans  &trans
-        &trans  &kp LS(TAB)  &trans  &trans  &bt BT_SEL 0  &bt BT_CLR_ALL    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans  &trans
-                                     &trans  &trans        &trans            &trans    &trans     &trans
+        &trans  &ctrl_globe DOWN  &ctrl_globe UP  &ctrl_globe LEFT  &ctrl_globe RIGHT  &kp F11           &ctrl_globe R  &kp LC(LS(TAB))  &kp LC(TAB)  &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))  &trans
+        &trans  &kp TAB           &trans          &trans            &trans             &trans            &kp LEFT       &kp DOWN         &kp UP       &kp RIGHT         &trans             &trans
+        &trans  &kp LS(TAB)       &trans          &trans            &bt BT_SEL 0       &bt BT_CLR_ALL    &kp HOME       &kp PG_DN        &kp PG_UP    &kp END           &trans             &trans
+                                                  &trans            &trans             &trans            &trans         &trans           &trans
       >;
     };
   };
